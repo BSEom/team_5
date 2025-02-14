@@ -1,1 +1,49 @@
 상남자는 별명같은거 안함
+
+#Q1
+
+inp = input('우 to the 영 to the 우')
+
+똑바로 = []
+똑바로_copy = []
+거꾸로 = []
+for i in range(len(inp)):
+    똑바로.append(inp[i])
+
+똑바로_copy = 똑바로.copy()
+
+for i in range(len(똑바로)):
+    거꾸로.append(똑바로.pop())
+
+if 똑바로_copy == 거꾸로:
+    print(f"입력값 : {inp} // 앞 뒤가 똑같은 우 to the 영 to the 우")
+else:
+    print(f"입력값 : {inp} // 앞 뒤가 다른 동 to the 그 to the 라미")
+
+#Q2
+
+inp = input('숫자 여러개 입력해보셈(띄어쓰기 해주셈)')
+num_list = inp.split(" ")
+odd_list = []
+even_list = []
+
+# print(type(int(num_list[0])))
+for i in num_list:
+    if int(i) % 2 == 0:
+        even_list.append(i)
+    else:
+        odd_list.append(i)
+
+print(f"짝수 리스트 : {even_list}, 홀수 리스트 : {odd_list}")
+
+#Q3
+
+inp = input('좋은 문장 하나 써봐라')
+word_list = inp.split(" ")
+max_len_word = ''
+
+for i in word_list:
+    if len(max_len_word) < len(i):
+        max_len_word = i
+        
+print(max_len_word)
