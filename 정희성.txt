@@ -40,10 +40,19 @@ print(f"짝수 리스트 : {even_list}, 홀수 리스트 : {odd_list}")
 
 inp = input('좋은 문장 하나 써봐라')
 word_list = inp.split(" ")
-max_len_word = ''
+max_len_word = []
 
-for i in word_list:
-    if len(max_len_word) < len(i):
-        max_len_word = i
-        
+if len(max_len_word) == 0:
+    max_len_word.append(word_list[0])
+    word_list.remove(word_list[0])
+if len(max_len_word) > 0:
+    for j in range(len(max_len_word)):
+        for i in range(len(word_list)):
+            if len(max_len_word[j]) == len(word_list[i]):
+                max_len_word.append(word_list[i])
+            elif len(max_len_word[j]) < len(word_list[i]):
+                max_len_word = []
+                max_len_word.append(word_list[i])
+
+
 print(max_len_word)
