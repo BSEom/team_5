@@ -54,3 +54,16 @@ elif len(n_mood)>0:
     print('기분이 나빠보이네요')
 else:
     print('평범한 하루네요')
+
+5)
+s = input("문장을 입력하세요.")
+sen = s.split()
+len_sen = len(sen)
+sentence = []
+for i in sen:
+    first = i[0]
+    f = first.upper()
+    q = f + i[1:]
+    sentence.append(q)
+result = " ".join(sentence)
+print(result + '.')
