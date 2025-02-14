@@ -25,12 +25,16 @@ print(f'odd = {oddbox}')
 3)
 a = input('문장을 입력하세요.')
 b = a.split()
-c = max(b)
-d = []
+c = []
+for j in b:
+    len_b = len(j)
+    c.append(len_b)
+d = max(c)
+e = []
 for i in b:
-    if len(i) == len(c):
-        d.append(i)
-print(d)
+    if len(i) == d:
+        e.append(i)
+print(e)
 
 4)
 positive_words = ["좋아","행복","멋져", "최고","사랑해"]
