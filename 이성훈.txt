@@ -15,11 +15,13 @@ elif c==0:
     print("앞 뒤 다릅니다.")
 =================================
 # P2
+from IPython.display import clear_output
 a=[]
-inp =0
+inp = ''
 while inp != 'end':
     inp = input('숫자를 입력하세요(끝나면end입력)')
     a.append(inp)
+    clear_output(wait=True) #이전 질문 지우기
 a.remove('end')    
 j =[]
 h =[]
@@ -30,12 +32,22 @@ for i in range(len(a)):
     else:
         h.append(a[i])
         
-print(j)
-print(h)
+print('짝수:', j)
+print('홀수:', h)
 =================================
 # P3
-inp = input('문장 입력하세요')
 
-x = inp.split()
+inp = input('문장 입력하세요:')
+
+x = inp.split(" ")
 x = sorted(x,key=len,reverse=True)
-print('제일 긴 단어:' + x[0])
+
+long =[]
+long.append(x[0])
+for a in range(1,len(x)):
+    if len(x[0]) == len(x[a]):
+        long.append(x[a])
+    
+        
+        
+print('제일 긴 단어:', long)
