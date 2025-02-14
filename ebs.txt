@@ -94,3 +94,24 @@ elif positive_count > negative_count:
 elif positive_count < negative_count:
     print("기분이 나빠보이네요")
 
+
+
+# ======================================================
+
+
+
+# q_05
+ 
+input_str = input("문장을 입력하세요.")
+
+str_li = input_str.split(' ')
+
+for y in range(len(str_li)):
+    temp_1 = str_li[y][0]
+    temp_2 = str_li[y][0].upper()
+    str_li[y] = str_li[y].replace(temp_1, temp_2)
+
+result = ' '.join(str_li)
+result = result+'.'
+
+print(result)
