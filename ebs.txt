@@ -24,8 +24,8 @@ else:
 
 # q_02
 
-# input_list = list(input("리스트를 입력하세요."))
-input_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+input_ls = input("(공백으로 구분) 리스트를 입력하세요. :")
+input_list = input_ls.split(' ')
 
 even_list = []
 odd_list = []
@@ -37,7 +37,7 @@ for n in range(len(input_list)):
     else:
         odd_list.append(input_list[n])
 
-print(f'짝수: {even_list}\n홀수: {odd_list}\n')
+print(f'홀수: {odd_list}\n짝수: {even_list}\n')
 
 
 # ======================================================
