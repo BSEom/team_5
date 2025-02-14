@@ -56,3 +56,29 @@ if len(max_len_word) > 0:
 
 
 print(max_len_word)
+
+#Q4
+positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
+
+inp = input("기분 한문장 요약 ㄱㄱ")
+inp = inp.replace("!","").replace(".","").replace(",","")
+inp = inp.split(" ")
+feel = []
+
+print(inp)
+
+for i in inp:
+    if i in positive_words:
+        feel.append(1)
+    elif i in negative_words:
+        feel.append(-1)
+    else:
+        feel.append(0)
+
+if feel.count(1) > feel.count(-1):
+    print("오늘 기분 좋구만요")
+elif feel.count(1) < feel.count(-1):
+    print("오늘 기분 안좋구만요")
+elif 1 not in feel and -1 not in feel:
+    print("평범하구만요")
