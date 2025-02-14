@@ -1,0 +1,62 @@
+# q_01
+
+text = list(input("단어를 입력해 주세요."))
+
+print(str(text), type(text))
+
+temp = text.copy()
+
+r_text = []
+
+for i in range(len(text)):
+    r_text.append(temp.pop())
+
+print(r_text, type(r_text))
+
+if text == r_text:
+    print('거꾸로 해도 똑같아요!')
+else:
+    print('거꾸로 하면 달라요..')
+
+
+# ======================================================
+
+
+# q_02
+
+# input_list = list(input("리스트를 입력하세요."))
+input_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+even_list = []
+odd_list = []
+
+for n in range(len(input_list)):
+    
+    if int(input_list[n]) % 2 == 0:
+        even_list.append(input_list[n])
+    else:
+        odd_list.append(input_list[n])
+
+print(f'짝수: {even_list}\n홀수: {odd_list}\n')
+
+
+# ======================================================
+
+
+# q_03
+
+input_str = input("문장을 입력하세요.")
+
+str_li = input_str.split(' ')
+
+max_len = ''
+
+for x in str_li:
+    if len(max_len) < len(x):
+        max_len = x
+
+print(max_len)
+
+    
+
+
