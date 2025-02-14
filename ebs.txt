@@ -103,15 +103,18 @@ elif positive_count < negative_count:
 # q_05
  
 input_str = input("문장을 입력하세요.")
-
 str_li = input_str.split(' ')
 
-for y in range(len(str_li)):
-    temp_1 = str_li[y][0]
-    temp_2 = str_li[y][0].upper()
-    str_li[y] = str_li[y].replace(temp_1, temp_2)
+temp_3 = []
 
-result = ' '.join(str_li)
+for y in str_li:
+    temp_1 = y[0]
+    temp_2 = y[0].upper()
+    
+    y = y.replace(temp_1, temp_2)
+    temp_3.append(y)
+    
+result = ' '.join(temp_3)
 result = result+'.'
 
 print(result)
