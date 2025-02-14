@@ -1,0 +1,33 @@
+1)
+a = input('단어를 입력하세요')
+b = list(a)
+c = b.reverse()
+d = ''.join(b)
+if a == d:
+    print('뒤집어도 같은 단어입니다.')
+else:
+    print('뒤집으면 다른 단어가 됩니다.')
+
+2)
+a = input('예시와 같이 숫자를 여러개 입력하세요(ex. 3 52 4 85)')
+b = a.split()
+evenbox=[]
+oddbox=[]
+
+for i in b:
+    if int(i) % 2 == 0:
+        evenbox.append(int(i))
+    else:
+        oddbox.append(int(i))
+print(f'even = {evenbox}')
+print(f'odd = {oddbox}')
+
+3)
+a = input('문장을 입력하세요.')
+b = a.split()
+c = max(b)
+d = []
+for i in b:
+    if len(i) == len(c):
+        d.append(i)
+print(d)
