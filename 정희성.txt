@@ -82,3 +82,10 @@ elif feel.count(1) < feel.count(-1):
     print("오늘 기분 안좋구만요")
 elif 1 not in feel and -1 not in feel:
     print("평범하구만요")
+
+#Q5
+inp = input("영어 소문자로 한문장 ㄱㄱ")
+inp = inp.split(" ")
+
+for i in range(len(inp)):
+    print(inp[i].replace(inp[i][0],inp[i][0].upper()), end=" ")
