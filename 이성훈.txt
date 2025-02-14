@@ -1,1 +1,41 @@
-이성훈
+# P1
+inp = input('단어를 입력하세요:')
+a = inp
+b = 0
+print(a[0])
+for i in range(int(len(a)/2)):
+    b += 1
+    if a[i] == a[len(a)-b]:
+        c=1
+    else:
+        c=0
+if c ==1:
+    print("앞 뒤 똑같습니다.")
+elif c==0:
+    print("앞 뒤 다릅니다.")
+=================================
+# P2
+a=[]
+inp =0
+while inp != 'end':
+    inp = input('숫자를 입력하세요(끝나면end입력)')
+    a.append(inp)
+a.remove('end')    
+j =[]
+h =[]
+for i in range(len(a)):
+    if int(a[i])%2 == 0:
+        j.append(a[i])
+        
+    else:
+        h.append(a[i])
+        
+print(j)
+print(h)
+=================================
+# P3
+inp = input('문장 입력하세요')
+
+x = inp.split()
+x = sorted(x,key=len,reverse=True)
+print('제일 긴 단어:' + x[0])
