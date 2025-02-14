@@ -55,8 +55,13 @@ for x in str_li:
     if len(max_len) < len(x):
         max_len = x
 
-print(max_len)
+print('\n길이가 가장 큰 단어:', end=' ') 
+print(max_len, end=' ')
 
+for x in str_li:
+    if len(max_len) == len(x):
+        if max_len != x:
+            print(x, end=' ')
     
 
 
