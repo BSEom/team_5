@@ -65,3 +65,32 @@ for x in str_li:
     
 
 
+# ======================================================
+
+
+
+# q_04
+
+positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
+
+input_string = input("당신의 기분을 한 문장으로 표현해주세요 : ")
+
+positive_count = 0
+negative_count = 0
+
+for a in positive_words:
+    if input_string.find(a) != -1:
+        positive_count += 1
+
+for b in negative_words:
+    if input_string.find(b) != -1:
+        negative_count += 1
+
+if positive_count == negative_count:
+    print("평범한 하루네요.")
+elif positive_count > negative_count:
+    print("기분이 좋아보이네요")
+elif positive_count < negative_count:
+    print("기분이 나빠보이네요")
+
