@@ -1,3 +1,5 @@
 class Ascii:
-    def__init__(self)
-    def ex1
+    def __init__(self):
+        self.result = 0
+
+    
