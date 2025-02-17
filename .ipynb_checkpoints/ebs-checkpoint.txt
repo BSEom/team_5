@@ -1,0 +1,120 @@
+# q_01
+
+text = list(input("단어를 입력해 주세요."))
+
+print(f'\n입력된 단어: {''.join(text)}')
+
+temp = text.copy()
+
+r_text = []
+
+for i in range(len(text)):
+    r_text.append(temp.pop())
+
+print(f'거꾸로 바꾼 단어: {''.join(r_text)}\n')
+
+if text == r_text:
+    print('거꾸로 해도 똑같아요!')
+else:
+    print('거꾸로 하면 달라요..')
+
+
+# ======================================================
+
+
+# q_02
+
+input_ls = input("(공백으로 구분) 리스트를 입력하세요. :")
+input_list = input_ls.split(' ')
+
+even_list = []
+odd_list = []
+
+for n in range(len(input_list)):
+    
+    if int(input_list[n]) % 2 == 0:
+        even_list.append(input_list[n])
+    else:
+        odd_list.append(input_list[n])
+
+print(f'홀수: {odd_list}\n짝수: {even_list}\n')
+
+
+# ======================================================
+
+
+# q_03
+
+input_str = input("문장을 입력하세요.")
+
+str_li = input_str.split(' ')
+
+max_len = ''
+
+for x in str_li:
+    if len(max_len) < len(x):
+        max_len = x
+
+print('\n길이가 가장 큰 단어:', end=' ') 
+print(max_len, end=' ')
+
+for x in str_li:
+    if len(max_len) == len(x):
+        if max_len != x:
+            print(x, end=' ')
+    
+
+
+# ======================================================
+
+
+
+# q_04
+
+positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
+
+input_string = input("당신의 기분을 한 문장으로 표현해주세요 : ")
+
+positive_count = 0
+negative_count = 0
+
+for a in positive_words:
+    if input_string.find(a) != -1:
+        positive_count += 1
+
+for b in negative_words:
+    if input_string.find(b) != -1:
+        negative_count += 1
+
+if positive_count == negative_count:
+    print("평범한 하루네요.")
+elif positive_count > negative_count:
+    print("기분이 좋아보이네요")
+elif positive_count < negative_count:
+    print("기분이 나빠보이네요")
+
+
+
+# ======================================================
+
+
+
+# q_05
+ 
+input_str = input("문장을 입력하세요.")
+str_li = input_str.split(' ')
+
+temp_3 = []
+
+for y in str_li:
+    temp_1 = y[0]
+    temp_2 = y[0].upper()
+    
+    y = y.replace(temp_1, temp_2)
+    temp_3.append(y)
+    
+result = ' '.join(temp_3)
+result = result+'.'
+
+print(result)
