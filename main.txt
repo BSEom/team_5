@@ -1,8 +1,13 @@
 class Ascii:
     def __init__(self):
         self.result = 0
-    def ex1():
+    def ex1(self):
         for i in range(65, 91):
             print(chr(i),end = ' ')
+    def ex3(self):
+        for i in range(3):
+            print('\n')
+            for j in range(1,11):
+                print(chr(i+65) + str(j) + '\t',end='')
 
     
