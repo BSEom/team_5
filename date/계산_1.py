@@ -1,16 +1,18 @@
 import datetime
 
 def birthday():
-    inp = input("생일 언제임 (월, 일만 입력해주고 숫자가 한자리이면 앞에 0붙여주기 안그러면 큰일남 귀찮게 해서 ㅈㅅ)")
-    while len(inp) != 4:
+    inp = input("주민번호 앞자리 입력 ㄱㄱ")
+    while len(inp) != 6:
         print("큰일났음 다시 입력해주삼")
-        inp = input("생일 언제임 (월, 일만 입력해주고 숫자가 한자리이면 앞에 0붙여주기 안그러면 큰일남 귀찮게 해서 ㅈㅅ)")
-        
-    inp = inp.replace('월','').replace('일','').replace('-','').replace(' ', '')
+        inp = input("주민번호 앞자리 입력 ㄱㄱ")  
     
-    month = int(inp[:2].replace('0', ''))
-    date = int(inp[2:].replace('0', ''))
-    birthday = datetime.date(2025,month,date)
+    month = inp[2:4]
+    if month[0] == "0":
+        month[0].replace("0","")
+    date = inp[4:]
+    if date[0] == "0":
+        date[0].replace("0","")
+    birthday = datetime.date(2025,int(month),int(date))
     today = datetime.datetime.now().date()
         
     birthday_diff = today - birthday
