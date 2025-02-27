@@ -6,7 +6,7 @@ def line4():
     import squarify
     
     
-    file_path = "./ref/서울시지하철호선별역별승하차인원정보.csv"
+    file_path = "./서울시지하철호선별역별승하차인원정보.csv"
     df = pd.read_csv(file_path,encoding='EUC-KR')
     df['passenger'] = df['승차총승객수'] + df['하차총승객수']
     data4 = df[df['호선명']=='4호선']
@@ -21,7 +21,7 @@ def line4():
     total_data = tdata.sort_values(by='passenger',ascending=False)
     total_data
     
-    d2_path = "./ref/D2Coding-Ver1.3.2-20180524.ttf"
+    d2_path = "./D2Coding-Ver1.3.2-20180524.ttf"
     fm.fontManager.addfont(d2_path)
     plt.rcParams["font.family"] = "D2Coding"
     
