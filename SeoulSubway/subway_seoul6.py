@@ -4,12 +4,12 @@ import matplotlib.font_manager as fm
 import squarify
 
 # 커스텀 폰트 로드 및 설정
-d2_path = 'dataset/D2Coding-Ver1.3.2-20180524.ttf'
+d2_path = './D2Coding-Ver1.3.2-20180524.ttf'
 fm.fontManager.addfont(d2_path)
 plt.rcParams["font.family"] = "D2Coding"
 
 # 데이터 로드
-file_path = "dataset/Seoul1.csv"
+file_path = "./서울시지하철호선별역별승하차인원정보.csv"
 raw = pd.read_csv(file_path, encoding='EUC-KR')
 
 # 6호선 데이터 필터링
