@@ -5,7 +5,7 @@ def line3():
     import matplotlib.font_manager as fm
     import squarify
     
-    file_path = "./ref/서울시지하철호선별역별승하차인원정보.csv"
+    file_path = "./서울시지하철호선별역별승하차인원정보.csv"
     df = pd.read_csv(file_path,encoding="EUC-KR")
     df['total'] = df['승차총승객수'] + df['하차총승객수']
     total_data = df[['호선명','역명','total']]
@@ -13,7 +13,7 @@ def line3():
     mdata = data.groupby(by='역명').sum().reset_index()
     tdata = mdata[['역명','total']]
     
-    d2_path = "./ref/D2Coding-Ver1.3.2-20180524.ttf"
+    d2_path = "./D2Coding-Ver1.3.2-20180524.ttf"
     fm.fontManager.addfont(d2_path)
     plt.rcParams["font.family"] = "D2Coding"
     
