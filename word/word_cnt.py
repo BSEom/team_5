@@ -37,3 +37,12 @@ def wcnt(sample_text):
     # 비교
     word_counts = Counter(sam_t.split())
     print(word_counts)
+
+    # 워드클라우드
+    wordcloud = WordCloud(font_path=font_path, width=800, height=400, background_color='white').generate(sam_t)
+    
+    # 시각화
+    plt.figure(figsize=(10,5))
+    plt.imshow(wordcloud, interpolation="bilinear")
+    plt.axis('off')
+    plt.show()
