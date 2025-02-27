@@ -1,5 +1,5 @@
 import pandas as pd
-file_path = './ref/서울시지하철호선별역별승하차인원정보.csv'
+file_path = './서울시지하철호선별역별승하차인원정보.csv'
 data=pd.read_csv(file_path, encoding='EUC-KR')
 
 # 열 이름 생성
@@ -18,7 +18,7 @@ total_data = tdata[['name','total']]           #이름과 총합만 나오도록
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-d2_path = "./ref/D2Coding-Ver1.3.2-20180524.ttf"
+d2_path = "./D2Coding-Ver1.3.2-20180524.ttf"
 fm.fontManager.addfont(d2_path)
 plt.rcParams['font.family'] = 'D2Coding'
 
